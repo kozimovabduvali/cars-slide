@@ -278,7 +278,7 @@ const Slider = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full !pb-28">
+              <div className="relative w-full h-full pb-16 md:!pb-28">
                 {slide.type === "video" ? (
                   <video
                     src={slide.src}
