@@ -287,7 +287,7 @@ const Slider = () => {
                     {slide.subtitle && <div className="text-white text-xs md:text-sm font-light mb-2 tracking-widest uppercase opacity-90" style={{ letterSpacing: '0.15em', fontWeight: 300 }}>{slide.subtitle}</div>}
                     {slide.headline && <h2 className="text-white text-2xl md:text-5xl font-light mb-4 leading-tight whitespace-pre-line" style={{ lineHeight: 1.1, fontWeight: 300 }}>{slide.headline}</h2>}
                     {slide.description && <p className="mb-6 text-base md:text-lg font-light text-white opacity-90" style={{ fontWeight: 300 }}>{slide.description}</p>}
-                    <div className="flex gap-3 mt-6">
+                    <div className="flex flex-col md:flex-row gap-3 mt-6">
                       {slide.buttons.map((btn, i) => (
                         <a
                           key={i}
