@@ -71,7 +71,7 @@ const Slider = () => {
 
   return (
     <>
-      <div className="relative w-full h-screen font-sans" style={{ fontFamily: "'astonmartinframe', sans-serif" }}>
+      <div className="relative w-full min-h-full font-sans" style={{ fontFamily: "'astonmartinframe', sans-serif" }}>
         {/* Navigation and Pagination OUTSIDE Swiper */}
         {/* Desktop (md+) navigation */}
         <button
