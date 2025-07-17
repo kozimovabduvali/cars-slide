@@ -278,7 +278,7 @@ const Slider = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full pb-16 md:!pb-28">
+              <div className="relative w-full h-full">
                 {slide.type === "video" ? (
                   <video
                     src={slide.src}
@@ -299,7 +299,7 @@ const Slider = () => {
                 <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 100%)' }} />
                 {/* Matn va tugmalar */}
                 <div
-                  className={`absolute left-0 bottom-0 w-full z-20 flex flex-col items-start justify-end transition-all duration-700 ${currentIndex === index ? 'opacity-100 translate-y-0 delay-300' : 'opacity-0 translate-y-8 pointer-events-none'}`}
+                  className={`absolute !pb-20 md:!pb-28 left-0 bottom-0 w-full z-20 flex flex-col items-start justify-end transition-all duration-700 ${currentIndex === index ? 'opacity-100 translate-y-0 delay-300' : 'opacity-0 translate-y-8 pointer-events-none'}`}
                   style={{ fontFamily: "'astonmartinframe', sans-serif", transitionProperty: 'opacity, transform', transitionDelay: currentIndex === index ? '300ms' : '0ms' }}
                 >
                   <div className="w-full max-w-6xl mx-auto px-5">
