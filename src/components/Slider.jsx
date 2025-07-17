@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -42,7 +42,26 @@ const slides = [
   },
 ];
 
+
 const Slider = () => {
+
+  useEffect(() => {
+    const setDocHeight = () => {
+      document.documentElement.style.setProperty(
+        "--doc-height",
+        `${window.innerHeight}px`
+      );
+    };
+
+    setDocHeight();
+    window.addEventListener("resize", setDocHeight);
+
+    return () => {
+      window.removeEventListener("resize", setDocHeight);
+    };
+  }, []);
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progressKey, setProgressKey] = useState(0); // for resetting animation
   const swiperRef = useRef(null);
@@ -71,7 +90,7 @@ const Slider = () => {
 
   return (
     <>
-      <div className="relative w-full h-full font-sans" style={{ fontFamily: "'astonmartinframe', sans-serif" }}>
+      <div className="relative w-full h-[var(--doc-height)] font-sans" style={{ fontFamily: "'astonmartinframe', sans-serif" }}>
         {/* Navigation and Pagination OUTSIDE Swiper */}
         {/* Desktop (md+) navigation */}
         <button
