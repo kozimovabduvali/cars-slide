@@ -142,7 +142,7 @@ const Slider = () => {
           </span>
         </button>
         {/* Mobile (md-) navigation + pagination */}
-        <div className="flex lg:!hidden absolute bottom-4 left-0 w-full justify-center items-center z-30 gap-16">
+        <div className="flex lg:!hidden absolute bottom-4 left-0 w-full justify-between items-center z-30 gap-16 px-5">
           <button
             onClick={goPrev}
             className="w-8 h-8 flex items-center justify-center bg-transparent border-none outline-none cursor-pointer"
