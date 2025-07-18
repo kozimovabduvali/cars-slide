@@ -95,7 +95,7 @@ const Slider = () => {
         {/* Desktop (md+) navigation */}
         <button
           onClick={goPrev}
-          className="hidden md:flex absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center bg-transparent border-none outline-none cursor-pointer"
+          className="hidden lg:flex absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center bg-transparent border-none outline-none cursor-pointer"
           aria-label="Previous slide"
           style={{ pointerEvents: 'auto' }}
         >
@@ -119,7 +119,7 @@ const Slider = () => {
         </button>
         <button
           onClick={goNext}
-          className="hidden md:flex absolute right-6 md:right-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center bg-transparent border-none outline-none cursor-pointer"
+          className=" hidden lg:flex absolute right-6 md:right-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center bg-transparent border-none outline-none cursor-pointer"
           aria-label="Next slide"
           style={{ pointerEvents: 'auto' }}
         >
@@ -142,7 +142,7 @@ const Slider = () => {
           </span>
         </button>
         {/* Mobile (md-) navigation + pagination */}
-        <div className="flex md:hidden absolute bottom-4 left-0 w-full justify-center items-center z-30 gap-16">
+        <div className="flex lg:!hidden absolute bottom-4 left-0 w-full justify-center items-center z-30 gap-16">
           <button
             onClick={goPrev}
             className="w-8 h-8 flex items-center justify-center bg-transparent border-none outline-none cursor-pointer"
@@ -227,7 +227,7 @@ const Slider = () => {
         `}</style>
         </div>
         {/* Desktop pagination (md+) */}
-        <div className="hidden md:flex absolute bottom-8 left-0 w-full justify-center z-30">
+        <div className="hidden lg:!flex absolute bottom-8 left-0 w-full justify-center z-30">
           <div className="flex gap-2">
             {slides.map((_, idx) => (
               <div
