@@ -95,7 +95,7 @@ const Slider = () => {
         {/* Desktop (md+) navigation */}
         <button
           onClick={goPrev}
-          className="hidden lg:flex absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center bg-transparent border-none outline-none cursor-pointer"
+          className="hidden lg:flex absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center bg-transparent border-none outline-none cursor-pointer !ml-8"
           aria-label="Previous slide"
           style={{ pointerEvents: 'auto' }}
         >
@@ -119,7 +119,7 @@ const Slider = () => {
         </button>
         <button
           onClick={goNext}
-          className=" hidden lg:flex absolute right-6 md:right-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center bg-transparent border-none outline-none cursor-pointer"
+          className="hidden lg:flex absolute right-6 md:right-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center bg-transparent border-none outline-none cursor-pointer !ml-8"
           aria-label="Next slide"
           style={{ pointerEvents: 'auto' }}
         >
